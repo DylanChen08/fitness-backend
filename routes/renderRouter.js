@@ -34,7 +34,7 @@ router.get("/shows", varietyShows.getAllVarietyShows);  //获取全部综艺
 router.get("/show/:showId", varietyShows.getSpecificShow);  //获取单个综艺的数据
 
 
-router.post("/register/", Register.handleReg);  //获取单个综艺的数据
+router.post("/register/", Register.handleReg);  //处理注册
 
 
 

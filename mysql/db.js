@@ -7,11 +7,13 @@ const connection = mysql.createConnection({
     database: "fitness"
 })
 connection.connect((err) => {
-    if (err) { console.log("连接失败") }
-    else { console.log("数据库连接成功") }
+    if (err) {
+        console.log("连接失败")
+    } else {
+        console.log("mysql数据库连接成功")
+    }
 })
-
-let query=(sql, callback)=>{
+let query = (sql, callback) => {
     connection.query(sql, function (err, rows) {
         callback(err, rows);
     });
