@@ -1,5 +1,5 @@
 import express from 'express';
-import db from './mongodb/db.js';
+import db from './mysql/db.js';
 import router from './routes/index.js';
 import cookieParser from 'cookie-parser'
 import session from 'express-session';
@@ -9,7 +9,6 @@ import bodyParser from 'body-parser'
 import config from './baseConfig'
 
 const app = express();
-console.log(1)
 app.all('*', (req, res, next) => {
     res.header("Access-Control-Allow-Origin", req.headers.origin || '*');
     res.header("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With");
@@ -17,7 +16,7 @@ app.all('*', (req, res, next) => {
     res.header("Access-Control-Allow-Credentials", true); //可以带cookies
     res.header("X-Powered-By", '3.2.1')
     if (req.method === 'OPTIONS') {
-        res.send(200);
+        res.sendStatus(200);
     } else {
         next();
     }
@@ -46,6 +45,6 @@ router(app);
 console.log('*********************************')
 console.log(`service start on ${config.port}`)
 console.log('*********************************')
-app.listen(config.port);
+app.listen(config.port); //后端端口配置文件
 
 module.exports = app;

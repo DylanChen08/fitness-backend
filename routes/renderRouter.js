@@ -7,7 +7,7 @@ import TV from "../controller/common/tvSeries"
 import Books from  "../controller/common/books"
 import varietyShows from "../controller/common/varietyShows"
 import Test from "../controller/common/test"
-
+import Register from '../controller/login/register'
 /*
 *
 * 数据渲染的主要路由
@@ -34,9 +34,8 @@ router.get("/shows", varietyShows.getAllVarietyShows);  //获取全部综艺
 router.get("/show/:showId", varietyShows.getSpecificShow);  //获取单个综艺的数据
 
 
+router.post("/register/", Register.handleReg);  //获取单个综艺的数据
 
-// console.log(1)
-router.get("/test",Test.RETEST)
-// console.log(2)
+
 
 export default router;
