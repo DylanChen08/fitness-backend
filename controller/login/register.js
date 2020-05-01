@@ -9,14 +9,15 @@ class Register {
         console.log('req.body', req.body)
         console.log('req.query', req.query)
         // res.send('这是从Express返回的数据')
-        let sql = "select * from users"
+        let sql = `INSERT INTO users (username, password, email) VALUES (${req.query.username}, ${req.query.password}, ${req.query.email})`
         db.query(sql, (err, rows) => {
             if (err) {
-                res.json({err: "chucuole"})
+                res.json({err: "出错了"})
             } else {
                 res.json({list: rows})
             }
         })
+
         //     if (req.params.movieId) {
         //         console.log(1102)
         //         const movieId = parseInt(req.params.movieId)
