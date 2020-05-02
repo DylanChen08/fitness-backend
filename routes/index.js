@@ -7,4 +7,5 @@ export default app => {
     *
     * */
     app.use('/common', a);
+
 }

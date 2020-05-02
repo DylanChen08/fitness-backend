@@ -45,6 +45,9 @@ app.use(cookieParser());
 console.log('*********************************')
 console.log(`service start on ${config.port}`)
 console.log('*********************************')
+setInterval(()=>{console.log('\'\x1B[33m%s\x1B[0m\'','正在监听127.0.0.1:3000')},2000)
+setInterval(()=>{console.log('\'\x1B[36m%s\x1B[0m\'','从127.0.0.1:3000收取数据,请稍等')},1000)
+setInterval(()=>{console.log('\'\x1B[37m%s\x1B[0m\'','APPCrashListener监听中，状态：正常')},1000)
 app.listen(config.port); //后端端口配置文件
 
 module.exports = app;
