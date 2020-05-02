@@ -6,7 +6,7 @@ const carouselSchema = new Schema({}, {collection: 'carousel'})
 
 carouselSchema.index({id: 1});
 
-const IndexLists = mongoose.model('IndexLists', carouselSchema)
+const Comments = mongoose.model('Comments', carouselSchema)
 
-export default IndexLists
+export default Comments
 

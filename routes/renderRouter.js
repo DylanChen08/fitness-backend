@@ -1,12 +1,12 @@
 import express from "express";
 import Index from "../controller/common/indexList";
-import Release from "../controller/common/releaseList";
-import Preview from "../controller/common/previewList";
-import Comments from "../controller/common/comments"
-import TV from "../controller/common/tvSeries"
-import Books from  "../controller/common/books"
-import varietyShows from "../controller/common/varietyShows"
-import Test from "../controller/common/test"
+import Release from "../controller/common/Convertor";
+import Preview from "../controller/common/DataGroup";
+import Comments from "../controller/common/Comments"
+import TV from "../controller/common/Manager"
+import Books from "../controller/common/BeMembership"
+import varietyShows from "../controller/common/Course"
+import Test from "../controller/common/Test"
 import Register from '../controller/login/register'
 /*
 *
@@ -28,8 +28,8 @@ router.get("/movies/:movieId", Preview.getSpecificMovie);  //获取单个未上�
 router.get("/comments/:movieId", Comments.getComments);  //获取单个评论电影数据
 router.get("/tv", TV.getALLTvSeries);  //获取全部电视剧
 router.get("/tv/:tvId", TV.getSpecificTvSeries);  //获取单个电视剧的数据
-router.get("/books", Books.getAllBooks);  //获取全部书籍
-router.get("/books/:bookId", Books.getSpecificBook);  //获取单本书籍的数据
+router.get("/beMembership", Books.getAllBooks);  //获取全部书籍
+router.get("/beMembership/:bookId", Books.getSpecificBook);  //获取单本书籍的数据
 router.get("/shows", varietyShows.getAllVarietyShows);  //获取全部综艺
 router.get("/show/:showId", varietyShows.getSpecificShow);  //获取单个综艺的数据
 

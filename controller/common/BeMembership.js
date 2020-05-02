@@ -1,15 +1,15 @@
-import tvSeries from '../../model/common/invalid/tvSeries'
+import Members from '../../model/common/valid/Members'
 
 console.log(1)
-class TvSeries {
+class Members {
     constructor() {
-        this.getALLTvSeries = this.getALLTvSeries.bind(this)
+        this.getAllMembers = this.getAllMembers.bind(this)
+        this.getSpecificMembers = this.getSpecificMembers.bind(this)
     }
 
-    async getALLTvSeries(req, res, next) {
-        let tv = tvSeries
-        let results = await tv.find({}, {})
-        console.log('请求 全部电视剧的数据')
+    async getAllMembers(req, res, next) {
+        let _Members = Members
+        let results = await _Members.find({}, {})
         console.log(results)
         //判断所查询的数据是否为空
         if (results.length !== 0) {
@@ -26,20 +26,14 @@ class TvSeries {
         }
 
     }
-
-    /*
-    * 获取单个已经上映的电视剧的数据
-    * @params:tvId
-    *
-    * */
-    async getSpecificTvSeries(req, res, next) {
-        if (req.params.tvId) {
-            const tvId = parseInt(req.params.tvId)
-            let tvS = tvSeries
-            let results = await tvS.find({
-                "id": tvId
+    async getSpecificMembers(req, res, next) {
+        if (req.params.MembersId) {
+            const MembersId = parseInt(req.params.MembersId)
+            let _Members = Members
+            let results = await _Members.find({
+                "id": MembersId
             });
-            console.log('tvid', tvId)
+            console.log('MembersId', MembersId)
             console.log(results)
             res.send({
                 status: 1,
@@ -56,4 +50,4 @@ class TvSeries {
 
 }
 
-export default new TvSeries()
+export default new Members()

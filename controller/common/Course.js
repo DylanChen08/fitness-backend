@@ -1,15 +1,15 @@
-import varietyShows from '../../model/common/invalid/varietyShows'
-console.log(1)
+import Data from '../../model/common/valid/Data'
 
-class VarietyShows {
+
+class Data {
     constructor() {
-        this.getAllVarietyShows = this.getAllVarietyShows.bind(this)
-        this.getSpecificShow = this.getSpecificShow.bind(this)
+        this.getAllData = this.getAllData.bind(this)
+        this.getSpecific = this.getSpecific.bind(this)
     }
 
-    async getAllVarietyShows(req, res, next) {
-        let _shows = varietyShows
-        let results = await _shows.find({}, {})
+    async getAllData(req, res, next) {
+        let _s = Data
+        let results = await _s.find({}, {})
         console.log('请求 全部综艺的数据')
         console.log(results)
         //判断所查询的数据是否为空
@@ -28,19 +28,14 @@ class VarietyShows {
 
     }
 
-    /*
-    * 获取单个综艺的数据
-    * @params:showId
-    *
-    * */
-    async getSpecificShow(req, res, next) {
-        if (req.params.showId) {
-            const showId = parseInt(req.params.showId)
-            let _shows = varietyShows
-            let results = await _shows.find({
-                "id": showId
+    async getSpecific(req, res, next) {
+        if (req.params.Id) {
+            const Id = parseInt(req.params.Id)
+            let _s = Data
+            let results = await _s.find({
+                "id": Id
             });
-            console.log('showid', showId)
+            console.log('id', Id)
             console.log(results)
             res.send({
                 status: 1,
@@ -57,4 +52,4 @@ class VarietyShows {
 
 }
 
-export default new VarietyShows()
+export default new Data()

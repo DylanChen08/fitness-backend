@@ -6,7 +6,7 @@ class Test {
     }
 
     async RETEST(req, res, next) {
-        // let tv = tvSeries
+        // let tv = manager
         // let results = await tv.find({}, {})
         console.log('请求 全部TEST数据')
         // console.log(results)

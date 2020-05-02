@@ -1,19 +1,19 @@
-import IndexLists from '../../model/common/invalid/indexLists'
+import Comments from '../../model/common/valid/Comments'
 
-console.log(1)
+
 class IndexList {
     constructor() {
-        this.indexMovieRender = this.indexMovieRender.bind(this)
-        console.log(this.indexMovieRender)
+        this.indexDataRender = this.indexDataRender.bind(this)
+        console.log(this.indexDataRender)
     }
 
-    async indexMovieRender(req, res, next) {
-        let index = IndexLists
+    async indexDataRender(req, res, next) {
+        let index = Comments
         let results = await index.find({}, {})
         res.send(results)
     }
     async indexCarouselRender(req, res, next){
-        let index = IndexLists
+        let index = Comments
         let results = await index.find({}, {})
         res.send(results)
     }
