@@ -1,6 +1,4 @@
-import renderRouter from './renderRouter'
-
-
+let a = {}
 export default app => {
     /*
     * 1.路由拼接
@@ -8,5 +6,5 @@ export default app => {
     * 3.拼接示例：/common/xxx
     *
     * */
-    app.use('/common', renderRouter);
+    app.use('/common', a);
 }

@@ -1,4 +1,4 @@
-import ReleaseLists from '../../model/common/valid/DataGroup'
+// import ReleaseLists from '../../model/common/valid/DataGroup'
 
 console.log(1)
 class Convertor {

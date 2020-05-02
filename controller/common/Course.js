@@ -1,4 +1,4 @@
-import Data from '../../model/common/valid/Data'
+// import Data from '../../model/common/valid/Data'
 
 
 class Data {

@@ -1,4 +1,4 @@
-import ShortTimeTable from '../../model/common/valid/TimeTable'
+// import ShortTimeTable from '../../model/common/valid/TimeTable'
 
 class ShortComment {
     constructor() {

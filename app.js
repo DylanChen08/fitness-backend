@@ -40,7 +40,7 @@ app.use(cookieParser());
 //         url: config.sessionStorageURL
 //     })
 // }))
-router(app);
+// router(app);
 // app.use(history());
 console.log('*********************************')
 console.log(`service start on ${config.port}`)

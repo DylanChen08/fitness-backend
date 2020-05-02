@@ -1,4 +1,4 @@
-import coach from '../../model/common/valid/coach'
+// import coach from '../../model/common/valid/coach'
 class Coach {
     constructor() {
         this.getAllcoach = this.getAllcoach.bind(this)

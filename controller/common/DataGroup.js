@@ -1,4 +1,4 @@
-import DataLists from '../../model/common/valid/DataList'
+// import DataLists from '../../model/common/valid/DataList'
 
 console.log(1)
 class DataList {
