@@ -17,7 +17,7 @@ let query = (sql, callback) => {
     connection.query(sql, function (err, rows) {
         callback(err, rows);
     });
-    // connection.end();//end()的话好像就只能连接一次的样子
+    // connection.end();//end()只能连接一次
 }
 
 exports.query = query
